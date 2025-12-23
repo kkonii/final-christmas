@@ -18,7 +18,7 @@ public class OutputView {
     }
 
     public void print(VisitDate date) {
-        System.out.printf("12월 %d일에 우테코 식당에서 받을 이벤트 혜택 미리 보기!", date);
+        System.out.printf("12월 %d일에 우테코 식당에서 받을 이벤트 혜택 미리 보기!", date.getDate());
         System.out.println();
         System.out.println();
     }
