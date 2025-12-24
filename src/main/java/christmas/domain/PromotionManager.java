@@ -50,9 +50,9 @@ public class PromotionManager {
         if (present.isEmpty()) {
             return 0;
         }
-        return present.values()
+        return present.entrySet()
                 .stream()
-                .mapToInt(integer -> integer)
+                .mapToInt(entry -> entry.getKey().getPrice() * entry.getValue())
                 .sum();
     }
 
