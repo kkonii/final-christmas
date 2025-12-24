@@ -48,7 +48,8 @@ public class Orders {
     public long countOf(Category category) {
         return orders.stream()
                 .filter(order -> order.getMenu().getCategory() == category)
-                .count();
+                .mapToInt(Order::getQuantity)
+                .sum();
     }
 
     //할인전 총액
