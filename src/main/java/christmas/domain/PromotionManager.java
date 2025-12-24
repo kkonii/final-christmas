@@ -58,7 +58,7 @@ public class PromotionManager {
 
     //프로모션 할인금
     public int saleBenefit() {
-        if (present.isEmpty()) {
+        if (promotionHistory.isEmpty()) {
             return 0;
         }
         return promotionHistory.values()
