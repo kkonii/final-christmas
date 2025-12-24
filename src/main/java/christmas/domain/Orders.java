@@ -17,8 +17,8 @@ public class Orders {
     //수량 20 초과
     private void validateTotalQuantity(List<Order> orders) {
         long quantities = orders.stream()
-                .mapToInt(order -> order.getQuantity())
-                .count();
+                .mapToInt(Order::getQuantity)
+                .sum();
 
         if (quantities > 20) {
             throw new PromotionException("수량 총합이 20개를 초과했습니다. 다시 입력해주세요.");
